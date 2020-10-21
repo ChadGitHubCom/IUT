@@ -1,0 +1,54 @@
+Ex1:
+
+(x < y) et (z == 4); est de type booléen
+(x < y) ou (z et (t == 4)); n'est pas booléen car z n'est pas un booléen
+x ou (y et (z < 5)); x et y bolléens, z entiers
+x ou (y et (x < 5)); impossible, x doit à la fois être booléen et entier
+
+
+Ex2:
+
+1)
+si <condition1> alors
+	si <condition2> alors
+		<instructions1>
+	sinon
+		<instructions2>
+	finSi
+//Il manque un finSi
+
+2)
+si <condition1> alors
+	si <condition2> alors
+		<instructions1>
+	sinon
+		<instructions2>
+	finSi
+finSi
+//L'instruction 1 se fait quand les conditions 1 et 2 sont respéctées, l'instruction 2 se fait quand la condtion 1 est respéctée et la 2 non respéctée.
+
+3)
+si <condition1> alors
+	si <condition2> alors
+		<instructions1>
+	finSi
+finSi
+sinon:
+	<instructions2>
+//Le sinon ne complète aucun si
+
+4)
+si <condition1> alors
+	si <condition2> alors
+		<instructions1>
+	finSi
+	sinon
+		<instructions2>
+finSi
+//Le sinon ne complète aucun si
+
+
+Ex3:
+Oui les algorithmes sont équivalents car le sinon dans le non piegeux est tout sauf "n mod 2 != 0" soit "n mod 2 == 0", donc écrire une deuxième condition comme celle ci reviens à faire un sinon
+
+

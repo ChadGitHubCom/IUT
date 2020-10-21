@@ -6,9 +6,9 @@ public class Ex3 {
         int counter = 0;
 
         for (int i = 273; i < 334; i++) {
-            if (t[i] < 13) counter++;
+            if (t[i] < 130) counter++;
             else counter = 0;
-            if (counter == 3) return i;
+            if (counter == 3) return i+1;
         }
 
         return 334;

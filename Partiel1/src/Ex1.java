@@ -2,11 +2,9 @@ public class Ex1 {
 
     //a)
     public static int jourPressionBasse(int[] t) {
-        int n = 0;
         for (int i : t)
-            if (i < 1006) n ++;
-        if (n == 0) n--;
-        return n;
+            if (i < 1006) return i;
+        return -1;
     }
 
     //b)
@@ -19,13 +17,6 @@ public class Ex1 {
 
     //c)
     public static int jourPressionBasseV2(int[]t) {
-        int n = 0;
-        int p = jourPressionBasseGen(t, 0);
-        while (p != -1) {
-            n++;
-            p = jourPressionBasseGen(t, p +1);
-        }
-        if (n == 0) n--;
-        return n;
+        return jourPressionBasseGen(t, 0);
     }
 }

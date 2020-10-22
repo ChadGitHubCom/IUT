@@ -6,11 +6,11 @@ public class Ex1 {
         return min + rndm.nextInt(max - min);
     }
 
-    public static void afficherTestProba(int min, int max, int nbr) {
+    public static void afficherTestProba(int nbr) {
         int c1 = 0, c2 = 0, c3 = 0, c4 = 0;
 
         for (int i = 0; i < nbr; i++) {
-            int r = generateRandom(min, max);
+            int r = generateRandom(1, 100);
             if (r < 50) c1++;
             else if (r < 70) c2++;
             else if (r < 90) c3++;

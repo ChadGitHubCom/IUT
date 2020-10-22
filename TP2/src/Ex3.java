@@ -40,8 +40,8 @@ public class Ex3 {
                 case 0:
                     break;
                 case 11:
-                    System.out.println("Saisir le minimum puis le maximum puis le nombre de test");
-                    Ex1.afficherTestProba(Ut.saisirEntier(), Ut.saisirEntier(), Ut.saisirEntier());
+                    System.out.println("Saisir le nombre de test");
+                    Ex1.afficherTestProba(Ut.saisirEntier());
                     break;
                 case 21:
                     System.out.println("Saisir la longeur puis la largeur");
@@ -49,7 +49,7 @@ public class Ex3 {
                     break;
                 case 31:
                     System.out.println("Saisir la longueur puis la largeur puis le nombre de marin");
-                    probaEmpirique(Ut.saisirEntier(), Ut.saisirEntier(), Ut.saisirEntier());
+                    System.out.println("Resultat" + probaEmpirique(Ut.saisirEntier(), Ut.saisirEntier(), Ut.saisirEntier()));
                     break;
                 case 32:
                     System.out.println("Saisir la longueur minimum puis la longueur maximum puis la largeur puis le nombre de marin");
@@ -57,7 +57,7 @@ public class Ex3 {
                     break;
                 case 33:
                     System.out.println("Saisir la longueur puis la largeur minimum puis le nombre de marin puis la probabilité minimum");
-                    largeurMin(Ut.saisirEntier(), Ut.saisirEntier(), Ut.saisirEntier(), Ut.saisirReel());
+                    System.out.println("Resultat: " + largeurMin(Ut.saisirEntier(), Ut.saisirEntier(), Ut.saisirEntier(), Ut.saisirReel()));
                     break;
                 default:
                     System.out.println("Paramètre incompris");

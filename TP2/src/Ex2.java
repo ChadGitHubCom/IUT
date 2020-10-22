@@ -9,13 +9,18 @@ public class Ex2 {
         int x = 0;
         int y = width/2;
 
-        while (y >= 0 && y < width && x >= 0 && x < length) {
+        while (y < width && x >= 0 && x < length) {
             int r = Ex1.generateRandom(0, 100);
 
             if (r < 50) x++;
             else if (r < 70) y--;
             else if (r < 90) y++;
             else x--;
+
+            if (y <= 0) {
+                x = 0;
+                y = width/2;
+            }
 
             mooves.add(new int[]{x, y});
 

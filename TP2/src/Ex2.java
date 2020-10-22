@@ -1,9 +1,15 @@
+import java.util.ArrayList;
+
 public class Ex2 {
+
+    //1 & 3)
     public static boolean ariveOBato(int length, int width, boolean trace) {
+        ArrayList<int[]> mooves = new ArrayList<>();
+        
         int x = 0;
         int y = width/2;
 
-        while (y >= 0 && y < width && x >= 0) {
+        while (y >= 0 && y < width && x >= 0 && x < length) {
             int r = Ex1.generateRandom(0, 100);
 
             if (r < 50) x++;
@@ -11,13 +17,16 @@ public class Ex2 {
             else if (r < 90) y++;
             else x--;
 
-            if (trace) affichePlanche(length, width, x, y);
+            mooves.add(new int[]{x, y});
 
-            if (x >= length) return true;
         }
-        return false;
+        if (trace) affichePlanche(length, width, mooves);
+
+        if (x >= length) return true;
+        else return false;
     }
 
+    //2)
     public static void affichePlanche(int length, int width, int x, int y) {
         Ut.clearConsole();
         for (int X = 0; X < length; X++) {
@@ -32,7 +41,14 @@ public class Ex2 {
         Ut.pause(1000);
     }
 
+    //2 bis)
+    public static void affichePlanche(int length, int width, ArrayList<int[]> mooves) {
+        for (int i = 0; i < mooves.size(); i++)
+            affichePlanche(length, width, mooves.get(i)[0], mooves.get(i)[1]);
+    }
+
     public static void main(String[] args) {
-        System.out.println(ariveOBato(10, 5, true));
+        if(ariveOBato(10, 5, true)) System.out.println("Il est arrivé au bato !");
+        else System.out.println("Plouf ...");
     }
 }

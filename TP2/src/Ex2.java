@@ -46,9 +46,4 @@ public class Ex2 {
         for (int i = 0; i < mooves.size(); i++)
             affichePlanche(length, width, mooves.get(i)[0], mooves.get(i)[1]);
     }
-
-    public static void main(String[] args) {
-        if(ariveOBato(10, 5, true)) System.out.println("Il est arrivé au bato !");
-        else System.out.println("Plouf ...");
-    }
 }

@@ -5,7 +5,7 @@ public class Ex4 {
 
         int somme = 0;
 
-        for (int i = debut; i < fin; i++) somme += t[i];
+        for (int i = debut; i <= fin; i++) somme += t[i];
 
         return somme / (fin - debut);
     }
